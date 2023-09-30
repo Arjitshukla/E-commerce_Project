@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h3>Welcome To <strong>Trend+Mart</strong></h3>
+<h1 class="my-3 text-center  bg-danger"> 🎉 BIG Billion Days 🎉</h1>
+<h1>👉WELCOME TO TREND+MART <b>BLOG</b> </h1>
+<h2>Discover unbeatable deals at TREND+MART – your one-stop shop for savings and selection!</h2>
+<a href="#blog" class="btn-get-started scrollto">Shop Now</a>
+{% endblock content %}
+
+{% block body %}
+<div class="container">
+    <div class="row my-2">
+        {% for item in myposts %}
+
+        <div id="blog" class="col-md-6 p-3">
+            <h3 class="taco-section-title primary">{{item.head0}}</h3>
+            <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{item.head0}}</strong>
+                    <h3 class="mb-0">{{item.title}}</h3>
+                    <div class="mb-1 text-muted">{{item.pub_date}}</div>
+                    <p class="card-text mb-auto">{{item.head1}}</p>
+                    <a href="blogpost/{{item.post_id}}" class="btn-learn-more">Learn More</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="/media/{{item.thumbnail}}" class="bd-placeholder-img" width="210" height="240"
+                        aria-label="Placeholder: Thumbnail" />
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:2 %}
+    </div>
+    <div class="row my-2">
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+    {% endblock %}

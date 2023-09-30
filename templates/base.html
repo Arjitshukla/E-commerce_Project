@@ -1,0 +1,182 @@
+{% load static%}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E-commerce Mart {% block title %}{% endblock title %}</title>
+  <meta content="E-commerce Mart" name="description">
+  <meta content="" name="Amazone,flipkart,trendingThings">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static'/assets/img/apple-touch-icon.png " rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/glightbox/css/glightbox.min.css ' %}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/remixicon/remixicon.css ' %}" rel="stylesheet">
+  <link href="{% static '/assets/vendor/swiper/swiper-bundle.min.css ' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/assets/css/style.css ' %}" rel="stylesheet">
+  {% block css %}{% endblock css %}
+  {% comment %} ========================================== --> {% endcomment %}
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- ======= logo ======= -->
+      <!-- <h1 class="logo"><a href="index.html">Trend+Mart</a></h1> -->
+      <a href="/" class="logo fw-4"><img src="{% static '/images/logo.png'%}" alt="" class="img-fluid h1">Trend+Mart</a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/blog/">Blog</a></li>
+          <li><a class="nav-link scrollto" href="/about/">About</a></li>
+          <li><a class="nav-link scrollto" href="/profile/">My Profile❤️</a></li>
+
+          <button type="button" class="nav-link scrollto bg-danger p-1 m-1 text-white" id="popcart"
+            data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"> Cart (<span
+              id="cart">0</span>)
+          </button>
+
+          {% if request.user.is_authenticated%}
+          <li><a class="nav-link scrollto" href="/auth/logout">Logout</a></li>
+          {% else %}
+          <li class="dropdown"><a href="#"><span>SignIn</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/auth/signup">Sign Up</a></li>
+              <li><a href="/auth/login">Log In</a></li>
+
+            </ul>
+          </li>
+          {% endif %}
+
+          <li><a class="nav-link scrollto  bg-dark  rounded-top p-2" href="/contact/">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+
+      {% block content %}
+      {% endblock content %}
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    {% block body %}
+    {% endblock body %}
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>TREND+MART</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +91 ********** <br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/checkout/">Checkout</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Items Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Electronic -Goods</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Men's Wear</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Grocery - Items</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Girls'wear</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Trend+Mart</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">Black Star★</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js '%}"></script>
+  <script src="{% static '/assets/vendor/glightbox/js/glightbox.min.js '%}"></script>
+  <script src="{% static '/assets/vendor/isotope-layout/isotope.pkgd.min.js '%}"></script>
+  <script src="{% static '/assets/vendor/swiper/swiper-bundle.min.js '%}"></script>
+  <script src="{% static '/assets/vendor/php-email-form/validate.js '%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/assets/js/main.js '%}"></script>
+
+</body>
+
+</html>
