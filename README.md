@@ -44,7 +44,7 @@
 </div>
 
 ### Contact-Us Page
-![Contact-Us Screenshot](Screenshots/Contact-Us.png)
+![Contact-Us Screenshot](Screenshots/Contact-us.png)
 
 ### About-Us Page
 ![About-Us Screenshot](Screenshots/About-Us.png)
@@ -53,7 +53,7 @@
 ![Product Page Screenshot](Screenshots/Product.png)
 
 ### Login Page
-![Login Page Screenshot](Screenshots/Login.png)
+![Login Page Screenshot](Screenshots/login.png)
 
 ### Sign-UP Page
 ![Sign-UP Page Screenshot](Screenshots/SignUp.png)
