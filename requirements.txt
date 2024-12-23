@@ -1,0 +1,16 @@
+asgiref==3.8.1
+certifi==2024.12.14
+charset-normalizer==3.4.0
+crypto==1.4.1
+Django==3.2.12
+idna==3.10
+Naked==0.1.32
+pillow==11.0.0
+pycrypto==2.6.1
+pytz==2024.2
+PyYAML==6.0.2
+requests==2.32.3
+shellescape==3.8.1
+sqlparse==0.5.3
+typing_extensions==4.12.2
+urllib3==2.3.0

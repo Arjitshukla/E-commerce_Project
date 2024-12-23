@@ -10,7 +10,7 @@ from django.contrib.auth  import authenticate,login,logout
 def  signup(request):
     if request.method=="POST":
             # Get the post parameters
-        name = request.POST['name']
+        # name = request.POST['name']
         email = request.POST['email']
         Userpass1 = request.POST['pass1']
         Userpass2 = request.POST['pass2']
