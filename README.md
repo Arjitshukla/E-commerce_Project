@@ -1,6 +1,7 @@
 # E-commerce_Project
  An e-commerce website backend built with Django provides a robust foundation for online businesses. It manages product databases, user authentication, and order processing seamlessly, ensuring a secure and efficient shopping experience while enabling easy customization and scalability.
- by : Arjit Shukla 
+ 
+ ## by : Arjit Shukla 
 
 ## Table of Contents
 - [E-commerce\_Project](#e-commerce_project)
@@ -137,14 +138,14 @@ To run this project locally, follow these steps:
 
 ## Usage
 - **Admin Panel:** Access the admin panel at `http://127.0.0.1:8000/admin/` to manage products, orders, and users.
-- **Shopping:** Browse products, add items to the cart, proceed to checkout, and make payments using Razorpay.
+- **Shopping:** Browse products, add items to the cart, proceed to checkout, and make payments using paytm.
 - **Profile:** Users can register, login, reset their password, view their order history, and update their profiles.
 
 ## Contributing
 Contributions are welcome! Please fork this repository and create a pull request with your proposed features, enhancements, or bug fixes.
 
 
-
+# Happy Coding Guys 👨‍💻👨‍💻
 
 #[ Join In Linkedin ](https://www.linkedin.com/in/arjit-shukla-484911275/)
 #[ follow me In Instagram ](https://www.instagram.com/__imarjit/)
