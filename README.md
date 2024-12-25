@@ -29,7 +29,7 @@
 - **Product Catalog:** Browse and search products with detailed descriptions and images.
 - **Shopping Cart:** Add, update, and remove items from the cart seamlessly.
 - **Checkout Process:** Smooth checkout flow with order summary and address management.
-- **Payment Integration:** Integrated with Razorpay for secure online payments.
+- **Payment Integration:** Integrated with Payment for secure online payments.
 - **Order Management:** View order history and status updates.
 - **Responsive Design:** Mobile-friendly UI ensuring a consistent experience across devices.
 - **Admin Panel:** Manage products, orders, and users efficiently through Django's admin interface.
